@@ -1,0 +1,21 @@
+<div>
+  <label class="display">
+      <input type="text" [(ngModel)]="display" >
+    </label>
+</div>
+<br>  
+
+<button (click)="onclick()">subumit</button>
+
+<div>
+  {{display}}
+</div>
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+ 
